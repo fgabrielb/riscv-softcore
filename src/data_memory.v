@@ -1,4 +1,8 @@
-module data_memory (
+module data_memory 
+#(
+	parameter MEMORY_DEPTH = 512
+)
+(
 	input clock,
 	input mem_read,
 	input mem_write,
@@ -8,11 +12,13 @@ module data_memory (
 	output [31:0] read_data
 );
 
-reg [32:0] memory [0:512];
+localparam ADDRESS_WIDTH = $clog2(MEMORY_DEPTH);
+
+reg [31:0] memory [0:MEMORY_DEPTH-1];
 
 always @(posedge clock) begin
 	if (mem_write) begin
-		memory[address] <= write_data;
+		memory[address[ADDRESS_WIDTH+1:2] <= write_data;
 	end
 end
 
