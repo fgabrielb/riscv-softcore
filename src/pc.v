@@ -15,5 +15,8 @@ always @(posedge clock) begin
 	else begin 
 		counter <= counter + 32'd4;
 	end
+	
+	if (reset) counter <= 1'b0;
+	
 end
 endmodule

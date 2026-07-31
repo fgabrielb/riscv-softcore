@@ -4,7 +4,7 @@
 ### 32 bits
 Since it's just an educational project, I decided to keep it in 32 bits for simplicity.
 
-### Single-Cycle: 
+### Single-Cycle
 By now, it's a single cycle cpu, i.e. executes only one instruction per clock cycle. I'll probably change it in the future.
 
 ## Disclaimer:
