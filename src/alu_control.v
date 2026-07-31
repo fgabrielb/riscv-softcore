@@ -21,5 +21,6 @@ always @(*) begin
 		end
 		default: operation = 4'b1111;
 	endcase
+end
 endmodule
 		
