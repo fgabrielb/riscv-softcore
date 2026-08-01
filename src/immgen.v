@@ -1,7 +1,7 @@
 module immgen (
 	input [31:0] instruction,
 	
-	output [31:0] imm
+	output reg [31:0] imm
 );
 
 always @(*) begin
