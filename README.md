@@ -11,11 +11,5 @@ By now, it's a single cycle cpu, i.e. executes only one instruction per clock cy
 
 Currently, I'm benchtesting the modules that are finished. After that, we should be able to run a single-cycle cpu with some basic instructions.
 
-### Currently suported instructions
-
-| Instruction | Description |
-|---------------------------|
-|
-
 ## Disclaimer:
 I'm learning verilog while doing this project.
