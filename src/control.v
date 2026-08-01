@@ -21,7 +21,7 @@ always @(*) begin
 			branch = 0;
 			alu_op = 2'b10;
 		end
-		7'b0000011: begin // ld
+		7'b0000011: begin // lw
 			alu_src = 1;
 			mem_to_reg = 1;
 			reg_write_enable = 1;
@@ -30,7 +30,7 @@ always @(*) begin
 			branch = 0;
 			alu_op = 2'b00;
 		end
-		7'b0100011: begin // sd
+		7'b0100011: begin // sw
 			alu_src = 1;
 			mem_to_reg = 0; // don't care bit
 			reg_write_enable = 0;
