@@ -18,10 +18,10 @@ reg [31:0] memory [0:MEMORY_DEPTH-1];
 
 always @(posedge clock) begin
 	if (mem_write) begin
-		memory[address[ADDRESS_WIDTH+1:2] <= write_data;
+		memory[address[ADDRESS_WIDTH+1:2]] <= write_data;
 	end
 end
 
-assign read_data = (mem_read) ? memory[address] : 32'b0;
+assign read_data = (mem_read) ? memory[address[ADDRESS_WIDTH+1:2]] : 32'b0;
 
 endmodule
